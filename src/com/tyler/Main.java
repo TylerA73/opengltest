@@ -3,35 +3,43 @@ package com.tyler;
 import org.joml.*;
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
+import org.lwjgl.nuklear.NkContext;
 import org.lwjgl.opengl.*;
-import org.lwjgl.system.*;
 
 import java.io.*;
-import java.lang.Math;
 import java.nio.*;
+import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
-import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
 import static org.lwjgl.opengl.GL15.GL_STATIC_DRAW;
 import static org.lwjgl.opengl.GL20.*;
-import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
 public class Main {
 
     public static void main(String[] args) {
         GLFWErrorCallback.createPrint(System.err).set();
+        Scanner keyboard = new Scanner(System.in);
 
         String vertexShaderPath, fragmentShaderPath;
         vertexShaderPath = "vertexshader.glsl";
         fragmentShaderPath = "fragmentshader.glsl";
 
+        Camera camera = new Camera();
+        camera.setEye(4f, 3f, 3f);
+        //camera.setUpX(0.5f);
+        camera.setUpY(0.5f);
+        //camera.setUpZ(1f);
+        camera.setFoV(90);
+
         Shape shape = new Shape("Cube");
         Shape shape2 = new Shape("Triangle");
 
-        Matrix4f mvp = shape.getModelViewProjectionMatrix();
+        AtomicReference<Matrix4f> mvp = new AtomicReference<>(camera.getModelViewProjection());
 
         final float[] g_vertex_buffer_data = {
                 -1.0f,-1.0f,-1.0f, // triangle 1 : begin
@@ -187,13 +195,136 @@ public class Main {
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LESS);
 
+        AtomicInteger pressed = new AtomicInteger();
+        AtomicInteger mode = new AtomicInteger();
+
+
+        glfwSetKeyCallback(window, (long win, int key, int scancode, int action, int mods) -> {
+            if (action == GLFW_PRESS) {
+                if (key == GLFW_KEY_RIGHT) {
+                    // right translation
+                } else if (key == GLFW_KEY_LEFT) {
+                    // left translation
+                } else {
+                    mode.set(key);
+                }
+            }
+        });
+
+        glfwSetScrollCallback(window, (long win, double xoffset, double yoffset) -> {
+            switch (mode.get()) {
+                case GLFW_KEY_Q:
+                    // field of view
+                    if (yoffset > 0) {
+                        camera.setFoV(camera.getFoV() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setFoV(camera.getFoV() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_W:
+                    // zNear
+                    if (yoffset > 0) {
+                        camera.setzNear(camera.getzNear() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setzNear(camera.getzNear() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_E:
+                    // zFar
+                    if (yoffset > 0) {
+                        camera.setzFar(camera.getzFar() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setzFar(camera.getzFar() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_A:
+                    // eyeX
+                    if (yoffset > 0) {
+                        camera.setEyeX(camera.getEyeX() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setEyeX(camera.getEyeX() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_S:
+                    // eyeY
+                    if (yoffset > 0) {
+                        camera.setEyeY(camera.getEyeY() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setEyeY(camera.getEyeY() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_D:
+                    // eyeZ
+                    if (yoffset > 0) {
+                        camera.setEyeZ(camera.getEyeZ() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setEyeZ(camera.getEyeZ() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_Z:
+                    // centerX
+                    if (yoffset > 0) {
+                        camera.setCenterX(camera.getCenterX() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setCenterX(camera.getCenterX() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_X:
+                    // centerY
+                    if (yoffset > 0) {
+                        camera.setCenterY(camera.getCenterY() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setCenterY(camera.getCenterY() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_C:
+                    // centerZ
+                    if (yoffset > 0) {
+                        camera.setCenterZ(camera.getCenterZ() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setCenterZ(camera.getCenterZ() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_I:
+                    // upX
+                    if (yoffset > 0) {
+                        camera.setUpX(camera.getUpX() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setUpX(camera.getUpX() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_O:
+                    // upY
+                    if (yoffset > 0) {
+                        camera.setUpY(camera.getUpY() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setUpY(camera.getUpY() - 0.1f);
+                    }
+                    break;
+                case GLFW_KEY_P:
+                    // upZ
+                    if (yoffset > 0) {
+                        camera.setUpZ(camera.getUpZ() + 0.1f);
+                    } else if (yoffset < 0) {
+                        camera.setUpZ(camera.getUpZ() - 0.1f);
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            mvp.set(camera.getModelViewProjection());
+        });
+
         do {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
             int matrixID = glGetUniformLocation(programID, "MVP");
 
             glUseProgram(programID);
             FloatBuffer fb = BufferUtils.createFloatBuffer(16);
-            glUniformMatrix4fv(matrixID, false, mvp.get(fb));
+            glUniformMatrix4fv(matrixID, false, mvp.get().get(fb));
 
             long offset = 0; // array buffer offset
 
