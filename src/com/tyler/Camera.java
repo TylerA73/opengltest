@@ -17,7 +17,7 @@ public class Camera {
     Camera() {
 
         // Default the Projection's values
-        this.FoV = (float) Math.toRadians(45.0); // default the camera's fovy to 45 degrees
+        this.FoV = (float) Math.toRadians(45); // default the camera's fovy to 45 degrees
         this.aspectRatio = (float) 4/3; // default the camera's aspect ratio to 4:3
         this.zNear = 0.1f;
         this.zFar = 100f;

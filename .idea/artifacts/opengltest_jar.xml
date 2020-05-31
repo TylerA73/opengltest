@@ -1,0 +1,79 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="opengltest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/opengltest_jar</output-path>
+    <root id="archive" name="opengltest.jar">
+      <element id="module-output" name="opengltest" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-assimp-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-assimp.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-bgfx-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-bgfx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-cuda.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-egl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-glfw-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-glfw.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-jawt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-jemalloc-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-jemalloc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-libdivide-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-libdivide.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-llvm-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-llvm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-lmdb-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-lmdb.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-lz4-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-lz4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-meow-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-meow.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nanovg-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nanovg.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nfd-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nfd.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nuklear-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-nuklear.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-odbc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-openal-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-openal.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opencl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opengl-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opengl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opengles-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opengles.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-openvr-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-openvr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opus-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-opus.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-ovr-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-ovr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-par-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-par.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-remotery-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-remotery.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-rpmalloc-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-rpmalloc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-shaderc-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-shaderc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-sse-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-sse.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-stb-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-stb.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tinyexr-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tinyexr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tinyfd-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tinyfd.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tootle-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-tootle.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-vma-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-vma.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-vulkan.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-xxhash-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-xxhash.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-yoga-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-yoga.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-zstd-natives-windows.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl-zstd.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lwjgl3/lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/joml-1.9.20.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
